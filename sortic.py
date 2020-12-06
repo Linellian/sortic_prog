@@ -13,4 +13,4 @@ while a != "!":
 
 # Комментарии с ожидаемыми выводами актуальны для значения
 st_b = [1, 2, 3, 4, 5]
-print(base_funct.f_sortic(st_a, st_b))
+st_a, st_b = base_funct.f_sortic(st_a, st_b)
