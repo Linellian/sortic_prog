@@ -1,9 +1,9 @@
 import sp_funct
-import r_funct 
+import r_funct
 import rr_funct
 import ch_sortic_funct
 import input_funct
-
+from termcolor import colored
 
 a = input_funct.f_num_split(input())
 
@@ -38,6 +38,6 @@ for i in f:
 
 a = ch_sortic_funct.f_sort(a)
 if a == ch_a:
-    print("OK")
+    print(colored("OK",'qreen'))
 else:
-    print("KO")
+    print(colored("KO","red"))
