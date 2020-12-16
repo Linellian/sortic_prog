@@ -35,16 +35,23 @@ def f_del_first(el):
         ter.append(el[i])
     return ter
 
-def f_sortic(st_a, st_b):
-    st_a = sp_funct.sa(st_a)                        # [2, 1, 3, 4, 5]      [1, 2, 3, 4, 5]
-    st_b = sp_funct.sb(st_b)                        # [2, 1, 3, 4, 5]      [2, 1, 3, 4, 5]
-    st_a, st_b = sp_funct.ss(st_a, st_b)            # [1, 2, 3, 4, 5]      [1, 2, 3, 4, 5]
-    st_a, st_b = sp_funct.pa(st_a, st_b)            # [1, 1, 2, 3, 4, 5]   [2, 3, 4, 5]
-    st_a, st_b = sp_funct.pb(st_a, st_b)            # [1, 2, 3, 4, 5]      [1, 2, 3, 4, 5]
-    st_a = r_funct.ra(st_a)                         # [2, 3, 4, 5, 1]      [1, 2, 3, 4, 5]
-    st_b = r_funct.rb(st_b)                         # [2, 3, 4, 5, 1]      [2, 3, 4, 5, 1]
-    st_a, st_b = r_funct.rr(st_a, st_b)             # [3, 4, 5, 1, 2]      [3, 4, 5, 1, 2]
-    st_a = rr_funct.rra(st_a)                       # [2, 3, 4, 5, 1]      [3, 4, 5, 1, 2]
-    st_b = rr_funct.rrb(st_b)                       # [2, 3, 4, 5, 1]      [2, 3, 4, 5, 1]
-    st_a, st_b = rr_funct.rrr(st_a, st_b)           # [1, 2, 3, 4, 5]      [1, 2, 3, 4, 5]
-    return st_a, st_b
+
+def f_max(el):
+    ma = 0
+    if el != []:
+        for i in el:
+            if i > ma:
+                ma = i
+        return ma
+    else:
+        return 0
+
+def f_min(el):
+    mi = 999
+    if el != []:
+        for i in el:
+            if i < mi:
+                mi = i
+        return mi
+    else:
+        return 0
