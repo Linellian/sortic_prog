@@ -1,30 +1,32 @@
-import base_funct
 import sp_funct
 import r_funct 
 import rr_funct
+import ch_sortic_funct
 
 
-ch_b = [1, 2, 3, 4, 5]
 
-a = input()
-ch_a = []
-while a != "!":
-    ch_a.append(int(a))
-    a = input()
+el_a = input()
+a = []
+while el_a != "!":
+    a.append(int(el_a))
+    el_a = input()
 
-f = input()
-st_f = []
-while f != "*":
-    st_f.append(f)
-    f = input()
+el_f = input()
+f = []
+while el_f != "*":
+    f.append(el_f)
+    el_f = input()
 
-for i in st_f:
+ch_a = a
+ch_b = []
+
+for i in f:
     if i == "sa":
-        sp_funct.sa(ch_a, ch_b)
+        ch_a = sp_funct.sa(ch_a)
     if i == "sb":
-        sp_funct.sb(ch_b, ch_a)
+        ch_b = sp_funct.sb(ch_b)
     if i == "ss":
-        sp_funct.ss(ch_a, ch_b)
+        ch_a, ch_b = sp_funct.ss(ch_a, ch_b)
     if i == "pa":
         ch_a, ch_b = sp_funct.pa(ch_a, ch_b)
     if i == "pb":
@@ -43,8 +45,9 @@ for i in st_f:
         ch_a, ch_b = rr_funct.rrr(ch_a, ch_b)
 
 
-st_a, st_b = base_funct.f_sortic(ch_a, ch_b)
-if st_a == ch_a and st_b == ch_b:
+a = ch_sortic_funct.f_sort(a)
+print(a, ch_a)
+if a == ch_a:
     print("OK")
 else:
     print("KO")
