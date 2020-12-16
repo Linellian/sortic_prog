@@ -1,3 +1,6 @@
+import base_funct
+import sp_funct
+import r_funct
 import rr_funct
 from termcolor import colored
 
