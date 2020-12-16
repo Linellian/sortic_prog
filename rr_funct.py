@@ -7,9 +7,9 @@ def rra(st_a):
         c.append(st_a[-1])
         for i in range(base_funct.f_len(st_a) - 1):
             c.append(st_a[i])
-        print("rra")
         st_a = c
     return st_a
+    
 
 def rrb(st_b):
     if st_b != []: 
@@ -17,9 +17,9 @@ def rrb(st_b):
         c.append(st_b[-1])
         for i in range(base_funct.f_len(st_b) - 1):
             c.append(st_b[i])
-        print("rrb")
         st_b = c
     return st_b
+    
 
 def rrr(st_a, st_b):
     if st_a != [] and st_b != []: 
@@ -31,7 +31,6 @@ def rrr(st_a, st_b):
         c_b.append(st_b[-1])
         for i in range(base_funct.f_len(st_b) - 1):
             c_b.append(st_b[i])
-        print("rrr")
         return c_a, c_b
     else:
         return st_a, st_b
