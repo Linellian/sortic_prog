@@ -1,8 +1,5 @@
-import base_funct
-import sp_funct
-import r_funct 
 import rr_funct
-
+from termcolor import colored
 
 def f_sort(a):
     b = []
@@ -15,28 +12,28 @@ def f_sort(a):
                     if a[0] > b[0]:
                         while a[0] > b[0]:
                             b = r_funct.rb(b)
-                            print("rb")
+                            print(colored("rb",'yellow'))
                         a, b = sp_funct.pb(a, b)
-                        print("pb")
+                        print(colored("pb",'red'))
                     elif a[0] < b[0]:
                         while a[0] < b[0]:
                             b = rr_funct.rrb(b)
-                            print("rrb")
+                            print(colored("rrb",'white'))
                         a, b = sp_funct.pb(a, b)
-                        print("pb")
+                        print(colored("pb",'blue'))
                         b = sp_funct.sb(b)
-                        print("sb")
+                        print(colored("sb",'green'))
                 elif a[0] < base_funct.f_min(b) or a[0] > base_funct.f_max(b):
                     while b[0] != base_funct.f_max(b):
                         b = rr_funct.rrb(b)
-                        print("rrb")
+                        print(colored("rrb",'yellow'))
                     a, b = sp_funct.pb(a, b)
-                    print("pb")
+                    print(colored("pb",'red'))
                     b = sp_funct.sb(b)
-                    print("sb")
+                    print(colored("sb",'white'))
 
             while b[0] != base_funct.f_min(b):
                 b = r_funct.rb(b)
-                print("rb")
+                print(colored("rb",'blue'))
             a, b = b, []
     return a
