@@ -8,9 +8,9 @@ def ra(st_a):
         for i in range(1, base_funct.f_len(st_a)):
             l_c.append(st_a[i])
         l_c.append(p_c)
-        print("ra")
         st_a = l_c
     return st_a
+    
 
 def rb(st_b):
     if st_b != []:
@@ -19,9 +19,9 @@ def rb(st_b):
         for i in range(1, base_funct.f_len(st_b)):
             l_c.append(st_b[i])
         l_c.append(p_c)
-        print("rb")
         st_b = l_c
     return st_b
+    
 
 def rr(st_a, st_b):
     if st_a != [] and st_b != []:
@@ -35,7 +35,6 @@ def rr(st_a, st_b):
         for i in range(1, base_funct.f_len(st_b)):
             l_cb.append(st_b[i])
         l_cb.append(p_cb)
-        print("rr")
         return l_ca, l_cb
     else:
         return st_a, st_b
