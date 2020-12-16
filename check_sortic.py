@@ -2,20 +2,12 @@ import sp_funct
 import r_funct 
 import rr_funct
 import ch_sortic_funct
+import input_funct
 
 
+a = input_funct.f_num_split(input())
 
-el_a = input()
-a = []
-while el_a != "!":
-    a.append(int(el_a))
-    el_a = input()
-
-el_f = input()
-f = []
-while el_f != "*":
-    f.append(el_f)
-    el_f = input()
+f = input_funct.f_split(input())
 
 ch_a = a
 ch_b = []
@@ -44,9 +36,7 @@ for i in f:
     if i == "rrr":
         ch_a, ch_b = rr_funct.rrr(ch_a, ch_b)
 
-
 a = ch_sortic_funct.f_sort(a)
-print(a, ch_a)
 if a == ch_a:
     print("OK")
 else:
